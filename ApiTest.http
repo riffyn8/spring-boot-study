@@ -1,0 +1,15 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+GET localhost:8080/api/v1/get-api/name
+
+###
+GET localhost:8080/api/v1/get-api/variable1/SpringBoot
+
+###
+GET localhost:8080/api/v1/get-api/request1?name=John&email=john@email.com&organization=google
+
+###
+GET localhost:8080/api/v1/get-api/request2?key1=value1&key2=value2&key3=value3
