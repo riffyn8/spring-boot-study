@@ -1,6 +1,8 @@
 package com.springboot.springbootstudy.controller;
 
 import com.springboot.springbootstudy.dto.MemberDto;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +31,14 @@ public class PostController {
     @PostMapping(value ="/member2")
     public String postMemberDto(@RequestBody MemberDto memberDto) {
         return memberDto.toString();
+    }
+
+    // ResponseEntity
+    // 클라이언트의 요청에 대해 응답 데이터와 HTTP 상태 코드를 직접 구성하여 전달
+    @PostMapping(value ="/member3")
+    public ResponseEntity<MemberDto> postMemberDto2(@RequestBody MemberDto memberDto) {
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(memberDto);
     }
 }
