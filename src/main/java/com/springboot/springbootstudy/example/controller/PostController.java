@@ -1,4 +1,4 @@
-package com.springboot.springbootstudy.controller;
+package com.springboot.springbootstudy.example.controller;
 
 import com.springboot.springbootstudy.dto.MemberDto;
 import org.springframework.http.HttpStatus;
